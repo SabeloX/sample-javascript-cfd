@@ -19,7 +19,8 @@ jobs:
           command: yarn build
       - persist_to_workspace:
           root: ~/project
-          path: .
+          path:
+            - .
   deploy:
     executor: heroku/default
     steps:
